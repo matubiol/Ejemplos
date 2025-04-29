@@ -21,6 +21,7 @@ bash denovo_assembly_ONT.sh --dir_reads=/ruta/a/lecturas_ONT --output=/ruta/sali
 bash denovo_assembly_ONT.sh --dir_reads=/ruta/a/lecturas_ONT --output=/ruta/salida --illumina=/ruta/a/lecturas_illumina
 ```
 **Parámetros**
+
 --dir_reads=: Ruta a la carpeta que contiene archivos .fastq.gz de lecturas Nanopore.
 
 --output=: Ruta de la carpeta de salida donde se guardarán los resultados.
@@ -66,6 +67,7 @@ python taxa_check.py \
 ```
 
 **Parámetros**
+
 --taxon: Nombre del taxón de interés. Puede ser un nombre o un archivo .txt con una lista de taxones (uno por línea). Obligatorio.
 
 --amplicon: Región amplicónica objetivo (por ejemplo, 16S, ITS, COI, 18S). Obligatorio.
