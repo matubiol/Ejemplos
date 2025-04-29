@@ -23,5 +23,5 @@ Este script evalúa la **disponibilidad y resolución taxonómica** de secuencia
 
 ## 3. `freyR-main` (R)
 
-Es un **paquete en R** diseñado para el análisis y visualización de datos de **microbiomas**, proporcionando herramientas para la **manipulación, exploración y representación gráfica** de datos de diversidad microbiana a partir de conteos taxonómicos. Facilita la integración de datos **filogenéticos, taxonómicos y ambientales**, permitiendo **análisis estadísticos y comparaciones entre muestras**, similar a **phyloseq**.
+Es un **paquete en R** diseñado para el análisis y visualización de datos de **microbiomas**, proporcionando herramientas para la **manipulación, exploración y representación gráfica** de datos de diversidad microbiana a partir de conteos taxonómicos. Facilita la integración de datos **filogenéticos y taxonómicos**, permitiendo **análisis estadísticos y comparaciones entre muestras**, similar a **phyloseq**.
 
