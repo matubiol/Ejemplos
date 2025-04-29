@@ -42,7 +42,7 @@ Este script evalúa la **disponibilidad y resolución taxonómica** de secuencia
 
 ```bash
 python taxa_check.py \
-  --taxon "Homo sapiens" \
+  --taxon "Escherichia coli" \
   --amplicon 16S \
   --trimmed_db Y \
   --classifier path/a/classifier.qza \
