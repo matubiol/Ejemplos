@@ -13,7 +13,7 @@ if(any(!inst_github)) {
 }
 
 ## Install freyR from gitlab
-devtools::install_git("https://gitlab.fera.co.uk/mfernand/freyR")
+devtools::install_git("https://github.com/matubiol/Ejemplos/edit/main/freyR-main")
 ```
 
 ## Funciones principales del paquete `freyR`
