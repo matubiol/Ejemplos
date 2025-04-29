@@ -20,7 +20,7 @@ bash denovo_assembly_ONT.sh --dir_reads=/ruta/a/lecturas_ONT --output=/ruta/sali
 ```bash
 bash denovo_assembly_ONT.sh --dir_reads=/ruta/a/lecturas_ONT --output=/ruta/salida --illumina=/ruta/a/lecturas_illumina
 ```
-Parámetros
+**Parámetros**
 --dir_reads=: Ruta a la carpeta que contiene archivos .fastq.gz de lecturas Nanopore.
 
 --output=: Ruta de la carpeta de salida donde se guardarán los resultados.
@@ -36,6 +36,59 @@ Este script evalúa la **disponibilidad y resolución taxonómica** de secuencia
 - **Generación de reportes** sobre la cantidad de secuencias encontradas, su nivel taxonómico más detallado y su origen (**NCBI** o una base de datos específica).
 - **Clasificación taxonómica de secuencias** usando diferentes métodos de asignación (**Naïve Bayes** o **VSEARCH**) en **QIIME 2**.
 - **Creación de archivos de salida** en formatos tabulados y **Excel** con información sobre la precisión taxonómica alcanzada para cada secuencia analizada.
+
+### Ejecución mínima (con parámetros explícitos)
+
+```bash
+python taxa_check.py \
+  --taxon "Homo sapiens" \
+  --amplicon 16S \
+  --trimmed_db Y \
+  --classifier path/a/classifier.qza \
+  --ref_seqs_path path/a/secuencias.qza \
+  --ref_taxa_path path/a/taxonomia.qza \
+  --primer_f ACTCCTACGGGAGGCAGCAG \
+  --primer_r GGACTACHVGGGTWTCTAAT \
+  --thread 8 \
+  --taxa_approach nb
+```
+### Ejecución usando archivo de configuración
+
+```bash
+python taxa_check.py \
+  --taxon "Homo sapiens" \
+  --amplicon 16S \
+  --trimmed_db N \
+  --config config_file.tsv \
+  --thread 8 \
+  --taxa_approach both \
+  --download_all Y
+```
+
+**Parámetros**
+--taxon: Nombre del taxón de interés. Puede ser un nombre o un archivo .txt con una lista de taxones (uno por línea). Obligatorio.
+
+--amplicon: Región amplicónica objetivo (por ejemplo, 16S, ITS, COI, 18S). Obligatorio.
+
+--trimmed_db: Indica si la base de datos ya está recortada (Y o N). Obligatorio.
+
+--classifier: Ruta al clasificador .qza (necesario si no se usa --config).
+
+--ref_seqs_path: Ruta a las secuencias de referencia (.qza) (necesario si no se usa --config).
+
+--ref_taxa_path: Ruta a la taxonomía de referencia (.qza) (necesario si no se usa --config).
+
+--primer_f: Secuencia del cebador forward (necesario si no se usa --config).
+
+--primer_r: Secuencia del cebador reverse (necesario si no se usa --config).
+
+--config: Archivo .tsv con información predefinida para cada amplicón (en lugar de especificar todos los parámetros anteriores).
+
+--thread: Número de hilos/CPU a usar (por defecto: 50% de los disponibles).
+
+--taxa_approach: Método de clasificación taxonómica: nb (Naïve Bayes), vs (VSEARCH) o both. Por defecto: both.
+
+--download_all: Si no se encuentra el taxón en la base de datos de referencia, indica si se deben descargar automáticamente secuencias desde NCBI (Y o N). Por defecto: N.
 
 ## 3. `freyR-main` (R)
 
