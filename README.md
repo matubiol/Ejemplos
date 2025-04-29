@@ -21,7 +21,7 @@ Este script evalúa la **disponibilidad y resolución taxonómica** de secuencia
 - **Clasificación taxonómica de secuencias** usando diferentes métodos de asignación (**Naïve Bayes** o **VSEARCH**) en **QIIME 2**.
 - **Creación de archivos de salida** en formatos tabulados y **Excel** con información sobre la precisión taxonómica alcanzada para cada secuencia analizada.
 
-## 3. `freyR-main.zip` (R)
+## 3. `freyR-main` (R)
 
 Es un **paquete en R** diseñado para el análisis y visualización de datos de **microbiomas**, proporcionando herramientas para la **manipulación, exploración y representación gráfica** de datos de diversidad microbiana a partir de conteos taxonómicos. Facilita la integración de datos **filogenéticos, taxonómicos y ambientales**, permitiendo **análisis estadísticos y comparaciones entre muestras**, similar a **phyloseq**.
 
