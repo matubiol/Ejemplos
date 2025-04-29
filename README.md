@@ -11,6 +11,22 @@ Este script realiza un ensamblaje **de novo** a partir de datos de secuenciació
 - **Mapeo y evaluación:** Mapea las lecturas contra el ensamblaje con **Minimap2** y genera estadísticas de alineamiento con **Samtools**. Finalmente, usa **QUAST** para evaluar la calidad del ensamblaje.
 - **Pulido opcional con Illumina:** Si se proporciona un directorio con lecturas de **Illumina**, el script realiza una fase adicional de pulido con **Pilon** para mejorar la precisión del ensamblaje.
 
+### Ejecución básica
+
+```bash
+bash denovo_assembly_ONT.sh --dir_reads=/ruta/a/lecturas_ONT --output=/ruta/salida
+```
+### Ejecución con pulido adicional usando lecturas Illumina
+```bash
+bash denovo_assembly_ONT.sh --dir_reads=/ruta/a/lecturas_ONT --output=/ruta/salida --illumina=/ruta/a/lecturas_illumina
+```
+Parámetros
+--dir_reads=: Ruta a la carpeta que contiene archivos .fastq.gz de lecturas Nanopore.
+
+--output=: Ruta de la carpeta de salida donde se guardarán los resultados.
+
+--illumina=: (Opcional) Ruta a la carpeta con lecturas Illumina emparejadas (*_R1_*.fastq.gz, *_R2_*.fastq.gz) para el pulido con Pilon.
+
 ## 2. `taxa_check.py` (Python)
 
 Este script evalúa la **disponibilidad y resolución taxonómica** de secuencias en bases de datos de referencia. Sus principales funciones incluyen:
