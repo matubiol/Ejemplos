@@ -1,5 +1,3 @@
-# Ejemplos de scripts implementando diferentes lenguajes de programación
-
 Este repositorio contiene ejemplos de scripts desarrollados en diferentes lenguajes de programación para el análisis de datos biológicos.
 
 ## 1. `denovo_assembly_ONT.sh` (Bash)
