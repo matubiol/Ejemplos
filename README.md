@@ -55,7 +55,7 @@ python taxa_check.py \
 
 ```bash
 python taxa_check.py \
-  --taxon "Homo sapiens" \
+  --taxon taxa.tsv \
   --amplicon 16S \
   --trimmed_db N \
   --config config_file.tsv \
